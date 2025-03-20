@@ -5,7 +5,7 @@ A simple yet powerful daily mood tracking app that helps users monitor their emo
 
 ## Live Demo
 
-[View the live application](https://your-deployment-link-here.com)
+[View the live application](https://daily-mood-tracker-flame.vercel.app/)
 
 ## Features
 
