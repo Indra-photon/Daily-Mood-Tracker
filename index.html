@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Mood Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Mood Tracker</h1>
+            <p class="subtitle">Track your emotional journey day by day</p>
+        </header>
+
+        <section class="mood-input-section" id="mood-input">
+            <h2>How are you feeling today?</h2>
+            <div class="date-display" id="current-date">
+            </div>
+            <div class="mood-selector">
+                <div class="mood-emoji" data-mood="happy">
+                    <span class="emoji">😊</span>
+                    <span class="mood-label">Happy</span>
+                </div>
+                <div class="mood-emoji" data-mood="excited">
+                    <span class="emoji">🤩</span>
+                    <span class="mood-label">Excited</span>
+                </div>
+                <div class="mood-emoji" data-mood="neutral">
+                    <span class="emoji">😐</span>
+                    <span class="mood-label">Neutral</span>
+                </div>
+                <div class="mood-emoji" data-mood="sad">
+                    <span class="emoji">😔</span>
+                    <span class="mood-label">Sad</span>
+                </div>
+                <div class="mood-emoji" data-mood="angry">
+                    <span class="emoji">😠</span>
+                    <span class="mood-label">Angry</span>
+                </div>
+            </div>
+            <button class="save-btn" id="save-mood">Save Mood</button>
+        </section>
+
+        <section class="visualization-section">
+            <h2>Your Mood Timeline</h2>
+            <div class="view-controls">
+                <button class="view-btn active" id="calendar-view">Calendar</button>
+                <button class="view-btn" id="day-view">Day</button>
+                <button class="view-btn" id="week-view">Week</button>
+            </div>
+
+            <div class="view-container" id="calendar-view-container">
+                <div class="month-navigation">
+                    <button id="prev-month"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="calendar-month">Month Year</h3>
+                    <button id="next-month"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar" id="mood-calendar">
+                    <div class="weekday-header">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendar-grid" id="calendar-days">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-container hidden" id="day-view-container">
+                <div class="day-view-header" id="day-view-date">
+                </div>
+                <div class="mood-entries-slider">
+                    <button class="slider-btn" id="prev-entry"><i class="fas fa-chevron-left"></i></button>
+                    <div class="mood-entries-container" id="mood-entries">
+                    </div>
+                    <button class="slider-btn" id="next-entry"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="entry-indicators" id="entry-indicators">
+                </div>
+            </div>
+
+            <div class="view-container hidden" id="week-view-container">
+                <div class="mood-timeline" id="week-timeline">
+                </div>
+            </div>
+        </section>
+        
+        <div class="clear-history-container">
+            <button class="clear-btn" id="clear-history">Clear All History</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
